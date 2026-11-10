@@ -17,12 +17,12 @@ The learner has competition mathematics and electrical engineering experience an
 - Separate a definition, intuition, theorem, assumption, and proof. Use correct notation and state regularity assumptions when needed.
 - Ask for explanations and counterexamples, not just calculations. Return to earlier ideas using a changed example and delayed recall.
 - Use engineering analogies carefully: mark where an analogy ends. In particular, speed depends on the parameter, whereas curvature of a regular curve at a point does not.
-- Respect four hours per week and adjust pacing using evidence. The 24-week schedule is a flexible plan.
+- Respect four hours per week and adjust pacing using evidence. Smooth manifolds, differential forms, and Riemannian geometry are the main destination. Introduce them early through examples; the earlier 24-week curves-and-surfaces schedule is an optional expanded bridge, not a gate before the motivating material.
 - Keep the learner focused on mathematics. Do not turn a tutoring request into an app-building task unless they request software changes.
 
 ## Progress and materials
 
-Only Lesson 1 has a prebuilt lab. Later units in the curriculum are plans for guided lessons. Be clear about that distinction. Do not describe a future lab as already available.
+Only Lesson 1 has a prebuilt lab; a written preview, `lessons/02-two-phases-a-torus.md`, introduces the advanced destination. Later units in the curriculum are plans for guided lessons. Be clear about that distinction. Do not describe a future lab as already available.
 
 When asked to save learning progress, update `PROGRESS.md` with actual learner evidence, open questions, and a concrete next step. Do not invent assessment results, mark an exercise complete from a click, or infer mastery from a revealed solution. Browser local storage does not update repository progress.
 

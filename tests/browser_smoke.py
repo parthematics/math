@@ -129,12 +129,12 @@ with TemporaryDirectory(prefix="math-course-browser-") as temporary:
 
             for width in (390, 320):
                 page.set_viewport_size({"width": width, "height": 844})
-                for route in ("learn", "practice", "review", "course", "unit-proofs"):
+                for route in ("learn", "practice", "review", "course", "unit-proofs", "unit-intrinsic", "unit-forms", "unit-stokes", "unit-riemannian", "unit-curvature", "unit-global"):
                     page.goto(base + "#" + route)
                     page.wait_for_function("document.documentElement.scrollWidth <= innerWidth")
-                    if route == "unit-proofs":
-                        assert page.locator("#unit-proofs").evaluate("(el) => el.open")
-                for filename in ("lesson-1.html", "curriculum.html", "placement.html"):
+                    if route.startswith("unit-"):
+                        assert page.locator("#" + route).evaluate("(el) => el.open")
+                for filename in ("lesson-1.html", "curriculum.html", "placement.html", "curves-and-surfaces.html", "manifold-preview.html"):
                     page.goto(base + filename)
                     expect(page.locator(".reader h1")).to_be_visible()
                     assert page.locator(".katex").count() > 0

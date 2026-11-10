@@ -5,7 +5,7 @@
 - Background in competition mathematics.
 - College-level mathematics through an electrical engineering degree.
 - No self-described pure mathematics background.
-- Interested in differential geometry.
+- Main destination: smooth manifolds, differential forms, and Riemannian geometry. These are the topics the learner is most excited about.
 - Wants difficult concepts taught interactively, enjoyably, and with understandable intuition.
 - Available time: approximately **four hours per week**.
 - Wants the learning website accessible across devices and updated after each change. GitHub Pages with automatic updates is the chosen publishing method.
@@ -21,4 +21,4 @@ Start with a geometric experiment. Use short diagnostic questions to adjust the 
 
 ## Agreed teaching direction
 
-A flexible route through proof, linear algebra, analysis, curves, surfaces, and intrinsic geometry. Use engineering connections when helpful, while developing the language and rigor needed for pure mathematics. Begin with curves and surfaces in Euclidean space; general abstract manifolds and a full course in Riemannian geometry are later extensions.
+The core route now reaches smooth manifolds, differential forms, and Riemannian geometry. Curves and surfaces build intuition and supply examples. Introduce advanced ideas early through concrete previews, then develop the necessary proofs, analysis, algebra, and topology as they arise. Use engineering connections when helpful, including phase spaces and circulation/flux. The earlier 24-week plan is an expanded bridge; the full route has open-ended pacing at four hours per week.

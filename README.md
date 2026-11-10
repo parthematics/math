@@ -1,6 +1,6 @@
 # Differential geometry
 
-A personal, interactive route into pure mathematics and differential geometry.
+A personal, interactive route into smooth manifolds, differential forms, and Riemannian geometry, starting from curves and surfaces.
 
 Built for a learner with competition mathematics and an electrical engineering degree, at **about four hours per week**. Prior calculus and linear algebra are useful starting points; proof fluency and recall will be checked rather than assumed.
 
@@ -10,11 +10,11 @@ Built for a learner with competition mathematics and an electrical engineering d
 2. Read **[Lesson 1: Same circle, different clock](lessons/01-same-circle-different-clock.md)**. Make the predictions before opening the explanations.
 3. In a chat with this repository, say: **“Teach me Lesson 1. Ask one question at a time.”** The tutor should wait for your reasoning and adapt the lesson to it.
 
-The [curriculum](CURRICULUM.md) gives the complete learning route. Only the first interactive lab is implemented; later units are plans for tutor-led lessons, not a finished course library.
+The [curriculum](CURRICULUM.md) gives the complete learning route. The first interactive lab and a [written manifold preview](lessons/02-two-phases-a-torus.md) are available; later units are plans for tutor-led lessons, not a finished course library.
 
 ## The learning rhythm
 
-Each week: two 60-minute lessons, one 90-minute problem/experiment session, and a 30-minute recall session. The 24-week schedule is an estimate, not a deadline. Use the [placement questions](lessons/00-placement.md) to choose where to spend time. Get a taste of geometry before working through prerequisites.
+Each week: two 60-minute lessons, one 90-minute problem/experiment session, and a 30-minute recall session. The full route is a year-plus project with pacing adjusted from evidence. The earlier [24-week curves-and-surfaces plan](CURVES_AND_SURFACES.md) remains an expanded bridge; advanced examples are introduced from the start. Use the [placement questions](lessons/00-placement.md) to choose where to spend time. Get a taste of geometry before working through prerequisites.
 
 Lessons follow **predict → experiment → explain → prove → transfer**. The goal is to connect a picture to a precise statement and then explain why the statement is true.
 

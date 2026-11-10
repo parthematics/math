@@ -16,7 +16,7 @@ test('the portable lab includes its scripts and styles without sibling requests'
 });
 
 test('published learning pages render mathematics and all local links resolve', () => {
-  for (const filename of ['index.html', 'curriculum.html', 'lesson-1.html', 'placement.html']) {
+  for (const filename of ['index.html', 'curriculum.html', 'curves-and-surfaces.html', 'lesson-1.html', 'placement.html', 'manifold-preview.html']) {
     const html = fs.readFileSync(path.join(root, filename), 'utf8');
     for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
       const href = match[1];
@@ -36,7 +36,7 @@ test('published learning pages render mathematics and all local links resolve', 
 
 test('the published artifact excludes personal learning records and development files', () => {
   assert.deepEqual(fs.readdirSync(root).sort(), [
-    '.nojekyll', 'assets', 'curriculum.html', 'index.html', 'lesson-1.html', 'placement.html',
+    '.nojekyll', 'assets', 'curriculum.html', 'curves-and-surfaces.html', 'index.html', 'lesson-1.html', 'manifold-preview.html', 'placement.html',
   ]);
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.doesNotMatch(html, /GH_TOKEN|GITHUB_TOKEN|LEARNING_PROFILE\.md|PROGRESS\.md/);

@@ -9,8 +9,10 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const out = path.join(root, 'dist');
 const documents = [
   { source: 'CURRICULUM.md', output: 'curriculum.html', title: 'Your learning path' },
+  { source: 'CURVES_AND_SURFACES.md', output: 'curves-and-surfaces.html', title: 'Curves and surfaces: the expanded bridge' },
   { source: 'lessons/01-same-circle-different-clock.md', output: 'lesson-1.html', title: 'Lesson 1 · Same circle, different clock' },
   { source: 'lessons/00-placement.md', output: 'placement.html', title: 'A small placement check' },
+  { source: 'lessons/02-two-phases-a-torus.md', output: 'manifold-preview.html', title: 'Two phases, a torus' },
 ];
 const routes = new Map(documents.map(doc => [path.resolve(root, doc.source), doc.output]));
 routes.set(path.resolve(root, 'index.html'), 'index.html');
