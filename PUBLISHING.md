@@ -17,7 +17,7 @@ The test command builds `dist/`. Its `index.html` includes the lab's CSS and Jav
 
 ## One-time GitHub setup
 
-In `parthematics/math`, open **Settings → Pages → Build and deployment**, then choose **GitHub Actions** as the source. This can also be configured through GitHub's Pages API when repository administration and API network access are available.
+In `parthematics/math`, open **Settings → Pages → Build and deployment**, then choose **GitHub Actions** as the source. Then open **Actions → Publish math studio → Run workflow**, using branch `main` (or rerun a failed deployment). This can also be configured through GitHub's Pages API when repository administration and API network access are available.
 
 The expected default address is `https://parthematics.github.io/math/`. This is an expected address, not proof of a deployment. A repository custom domain or existing Pages configuration may change the final URL; prefer the URL returned by the actual deployment.
 
@@ -36,3 +36,7 @@ Use existing GitHub authentication. A successful Git push does not establish API
 For source development, the original `index.html`, `styles.css`, `geometry.js`, and `app.js` still work together. For deployed behavior, serve `dist/` with a local static server and check its rendered reading pages as well as the experiment. A local test server is temporary and is not a published website.
 
 The prepared cloud machine also supports `python3 tests/browser_smoke.py`, which checks a project subdirectory, phone layouts, equations, controls, saved notes, denied storage, and an HTML-only preview. It starts and shuts down its own temporary server.
+
+## Initial deployment observation
+
+The initial source and workflow were pushed to `main`. In [the first GitHub Actions run](https://github.com/parthematics/math/actions/runs/42915012993), the build passed and produced the site artifact. Deployment failed in **Check Pages configuration** with “Get Pages site failed” / “Not Found”, indicating Pages must be enabled and set to GitHub Actions. Direct API and Pages requests from the cloud machine were blocked at proxy CONNECT; network additions have been saved but not applied. No live deployment was verified. Replace this observation after completing setup and verifying publication.
