@@ -33,10 +33,10 @@ Use existing GitHub authentication. A successful Git push does not establish API
 
 ## Local validation
 
-For source development, the original `index.html`, `styles.css`, `geometry.js`, and `app.js` still work together. For deployed behavior, serve `dist/` with a local static server and check its rendered reading pages as well as the experiment. A local test server is temporary and is not a published website.
+For source development, the original `index.html`, `styles.css`, `geometry.js`, `practice.js`, and `app.js` still work together. For deployed behavior, serve `dist/` with a local static server and check its rendered reading pages as well as the experiment. A local test server is temporary and is not a published website.
 
 The prepared cloud machine also supports `python3 tests/browser_smoke.py`, which checks a project subdirectory, phone layouts, equations, controls, saved notes, denied storage, and an HTML-only preview. It starts and shuts down its own temporary server.
 
-## Initial deployment observation
+## Deployment access
 
-The initial source and workflow were pushed to `main`. In [the first GitHub Actions run](https://github.com/parthematics/math/actions/runs/42915012993), the build passed and produced the site artifact. Deployment failed in **Check Pages configuration** with “Get Pages site failed” / “Not Found”, indicating Pages must be enabled and set to GitHub Actions. Direct API and Pages requests from the cloud machine were blocked at proxy CONNECT; network additions have been saved but not applied. No live deployment was verified. Replace this observation after completing setup and verifying publication.
+Pages has been enabled. [Workflow run 42919117144](https://github.com/parthematics/math/actions/runs/42919117144) successfully built and deployed to `https://parthematics.github.io/math/`. The cloud machine's direct API and Pages requests were blocked by its proxy, so deployment status was observed through GitHub's public workflow page. For each new update, verify the matching commit's workflow and make a functional live request when network access permits. Never treat an earlier successful run as evidence for a later change.

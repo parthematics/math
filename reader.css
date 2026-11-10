@@ -1,3 +1,37 @@
-:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#27382f;background:#f5f5ef;font-size:16px;line-height:1.8}
-*{box-sizing:border-box}body{margin:0}a{color:#315743;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid #b85f36;outline-offset:4px}.reader-header{max-width:1000px;margin:auto;padding:25px 30px;border-bottom:1px solid #dfe3d7;display:flex;justify-content:space-between;gap:20px;font-size:13px}.reader-header nav{display:flex;gap:20px}.reader{max-width:900px;margin:45px auto 80px;padding:0 30px;overflow-wrap:break-word}.reader h1,.reader h2,.reader h3{font-family:Georgia,"Times New Roman",serif;font-weight:normal;line-height:1.25;letter-spacing:-.5px}.reader h1{font-size:42px;margin:0 0 30px}.reader h2{font-size:29px;margin-top:50px}.reader h3{font-size:23px;margin-top:32px}.reader p,.reader li{max-width:78ch}.reader li{margin:9px 0}.reader table{border-collapse:collapse;width:100%;display:block;overflow-x:auto;font-size:14px;margin:24px 0}.reader td,.reader th{border:1px solid #d8dfce;padding:12px 15px;text-align:left;min-width:105px;vertical-align:top}.reader th{background:#e9eee2;font-weight:600}.reader details{border:1px solid #d8dfce;border-radius:8px;padding:17px 22px;margin:26px 0;background:#fffefa}.reader summary{cursor:pointer;color:#315743;font-weight:600}.reader details[open] summary{margin-bottom:18px}.reader code{font-size:.9em;background:#e9eee2;border-radius:3px;padding:2px 4px}.reader pre{overflow-x:auto;background:#e9eee2;padding:18px}.reader .katex-display{padding:12px 0;overflow-x:auto;overflow-y:hidden}.reader .katex{font-size:1.12em}.reader blockquote{border-left:3px solid #8fa17f;padding-left:20px;color:#5c6e54}.reader strong{font-weight:650}
-@media(max-width:600px){:root{font-size:15px}.reader-header{padding:20px;display:block}.reader-header nav{margin-top:12px;gap:18px;font-size:12px}.reader{padding:0 20px;margin-top:30px}.reader h1{font-size:33px}.reader h2{font-size:26px}.reader td,.reader th{padding:10px;min-width:100px}.reader details{padding:15px}.reader .katex{font-size:1.03em}}
+:root { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color: #21242c; background: #fff; font-size: 16px; line-height: 1.8; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #1452c4; text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #1865f2; outline-offset: 4px; }
+.reader-header { max-width: 1100px; margin: auto; padding: 22px 30px; border-bottom: 1px solid #dfe2e7; display: flex; justify-content: space-between; gap: 20px; font-size: 14px; }
+.reader-header nav { display: flex; gap: 22px; }
+.reader { max-width: 900px; margin: 38px auto 80px; padding: 0 30px; overflow-wrap: break-word; }
+.reader h1, .reader h2, .reader h3 { font-weight: 650; line-height: 1.35; letter-spacing: -.5px; }
+.reader h1 { font-size: 32px; margin: 0 0 28px; }
+.reader h2 { font-size: 24px; margin-top: 40px; }
+.reader h3 { font-size: 19px; margin-top: 30px; }
+.reader p, .reader li { max-width: 78ch; }
+.reader li { margin: 9px 0; }
+.reader table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; font-size: 14px; margin: 24px 0; }
+.reader td, .reader th { border: 1px solid #dfe2e7; padding: 12px 15px; text-align: left; min-width: 105px; vertical-align: top; }
+.reader th { background: #f4f6f9; font-weight: 600; }
+.reader details { border: 1px solid #dfe2e7; border-radius: 4px; padding: 16px 20px; margin: 26px 0; }
+.reader summary { cursor: pointer; color: #1452c4; font-weight: 600; }
+.reader details[open] summary { margin-bottom: 18px; }
+.reader code { font-size: .9em; background: #f0f3f7; border-radius: 3px; padding: 2px 4px; }
+.reader pre { overflow-x: auto; background: #f0f3f7; padding: 18px; }
+.reader .katex-display { padding: 12px 0; overflow-x: auto; overflow-y: hidden; }
+.reader .katex { font-size: 1.12em; }
+.reader blockquote { border-left: 3px solid #85a9e8; padding-left: 20px; color: #4a566b; }
+.reader strong { font-weight: 650; }
+@media(max-width:600px) {
+  :root { font-size: 15px; }
+  .reader-header { padding: 18px 20px; display: block; }
+  .reader-header nav { margin-top: 12px; gap: 18px; font-size: 13px; }
+  .reader { padding: 0 20px; margin-top: 28px; }
+  .reader h1 { font-size: 27px; }
+  .reader h2 { font-size: 23px; }
+  .reader td, .reader th { padding: 10px; min-width: 100px; }
+  .reader details { padding: 15px; }
+  .reader .katex { font-size: 1.03em; }
+}

@@ -9,6 +9,7 @@
 - Wants difficult concepts taught interactively, enjoyably, and with understandable intuition.
 - Available time: approximately **four hours per week**.
 - Wants the learning website accessible across devices and updated after each change. GitHub Pages with automatic updates is the chosen publishing method.
+- Prefers Khan Academy as an inspiration for teaching and UI: clear course structure, short explanations, focused practice, useful hints, and straightforward visual design.
 
 ## Working assumptions to check
 

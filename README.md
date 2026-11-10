@@ -1,4 +1,4 @@
-# A feel for geometry
+# Differential geometry
 
 A personal, interactive route into pure mathematics and differential geometry.
 
@@ -6,7 +6,7 @@ Built for a learner with competition mathematics and an electrical engineering d
 
 ## Start learning
 
-1. Use the published GitHub Pages site once deployment is enabled (see [publishing](PUBLISHING.md)). For a portable HTML lab, build the site and open `dist/index.html`; it includes its scripts and styles in one file. The source [index.html](index.html) needs its companion CSS and JavaScript files in the same folder.
+1. Open **[the course](https://parthematics.github.io/math/)**. Follow **Learn → Practice → Review**. For a portable HTML lesson, build the site and open `dist/index.html`; it includes its scripts and styles in one file. The source [index.html](index.html) needs its companion CSS and JavaScript files in the same folder.
 2. Read **[Lesson 1: Same circle, different clock](lessons/01-same-circle-different-clock.md)**. Make the predictions before opening the explanations.
 3. In a chat with this repository, say: **“Teach me Lesson 1. Ask one question at a time.”** The tutor should wait for your reasoning and adapt the lesson to it.
 
@@ -24,7 +24,7 @@ Lessons follow **predict → experiment → explain → prove → transfer**. Th
 
 ## Development
 
-The lab uses plain HTML, CSS, JavaScript, and SVG, with no external requests or runtime dependencies. Notes and prediction attempts are saved in browser local storage when available. They do not sync between browsers or update the repository's progress log.
+The lab uses plain HTML, CSS, JavaScript, and SVG, with no external requests or runtime dependencies. Practice includes four questions, staged hints, retry feedback, and optional worked solutions. First-try answers, answers after help, and viewed solutions are recorded separately; none automatically establish mastery. Existing notes from the original lab are preserved. Notes and practice are saved in browser local storage when available. They do not sync between browsers or update the repository's progress log.
 
 For local development, optionally run `python3 -m http.server 8000 --bind 127.0.0.1` from this directory. Stop it with Ctrl+C. No running service is required to open the lab as a file.
 

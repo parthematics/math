@@ -27,11 +27,12 @@ const css = await readFile(path.join(root, 'styles.css'), 'utf8');
 const readerCss = await readFile(path.join(root, 'reader.css'), 'utf8');
 const source = await readFile(path.join(root, 'index.html'), 'utf8');
 const geometry = await readFile(path.join(root, 'geometry.js'), 'utf8');
+const practice = await readFile(path.join(root, 'practice.js'), 'utf8');
 const app = await readFile(path.join(root, 'app.js'), 'utf8');
 let index = source.replace('<link rel="stylesheet" href="styles.css">', () => '<style>\n' + css + '\n</style>');
-index = index.replace(/^\s*<script src="(?:geometry|app)\.js" defer><\/script>\s*$/gm, '');
+index = index.replace(/^\s*<script src="(?:geometry|practice|app)\.js" defer><\/script>\s*$/gm, '');
 index = index.replace(/href="([^"]+\.md(?:#[^"]*)?)"/g, (_, href) => 'href="' + publicLink(href, 'index.html') + '"');
-const inline = (geometry + '\n' + app).replace(/<\/script/gi, '<\\/script');
+const inline = (geometry + '\n' + practice + '\n' + app).replace(/<\/script/gi, '<\\/script');
 index = index.replace('</body>', () => '<script>\n' + inline + '\n</script>\n</body>');
 if (/<script[^>]+src=|<link[^>]+rel="stylesheet"/i.test(index)) {
   throw new Error('The portable lab must not depend on separate scripts or stylesheets.');
@@ -59,11 +60,11 @@ for (const doc of documents) {
   if (body.includes('katex-error')) throw new Error('Math failed to render in ' + doc.source);
   const page = '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">' +
-    '<title>' + doc.title + ' · Math studio</title>' +
-    '<meta name="theme-color" content="#f5f5ef">' +
+    '<title>' + doc.title + ' · Math</title>' +
+    '<meta name="theme-color" content="#ffffff">' +
     '<link rel="stylesheet" href="assets/katex.min.css">' +
     '<style>' + readerCss + '</style></head><body>' +
-    '<header class="reader-header"><a href="index.html">← Back to the studio</a>' +
+    '<header class="reader-header"><a href="index.html#learn">← Back to the lesson</a>' +
     '<nav aria-label="Reading navigation"><a href="lesson-1.html">Lesson 1</a>' +
     '<a href="curriculum.html">Curriculum</a><a href="placement.html">Placement</a></nav></header>' +
     '<main class="reader">' + body + '</main></body></html>\n';

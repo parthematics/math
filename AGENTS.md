@@ -30,9 +30,11 @@ Use `lessons/00-placement.md` selectively. Do not show all answers before the le
 
 ## Working on the lab
 
-`index.html`, `styles.css`, `geometry.js`, and `app.js` form an offline static app. Keep it usable when opened directly as a file, without package installation, network fonts, CDN scripts, credentials, or services. A development server is optional. Preserve keyboard access, meaningful labels, visible focus, reduced-motion support, and honest status messages if browser storage is unavailable.
+`index.html`, `styles.css`, `geometry.js`, `practice.js`, and `app.js` form an offline static app. Keep it usable when opened directly as a file, without package installation, network fonts, CDN scripts, credentials, or services. A development server is optional. Preserve keyboard access, meaningful labels, visible focus, reduced-motion support, and honest status messages if browser storage is unavailable.
 
 Run `node --test tests/geometry.test.cjs` after changes to the geometry. For interaction changes, exercise the affected sliders, predictions, and note persistence in a browser; syntax checks alone do not demonstrate that the lab works.
+
+Use a course-and-lesson structure inspired by Khan Academy: readable sans-serif typography, direct explanations, one practice question at a time, staged hints, and clear next actions. Avoid marketing heroes, decorative slogans, fake streaks, and fabricated mastery percentages. Wrong answers must not automatically reveal the solution. Distinguish first-try answers, answers after help, and viewed solutions. Preserve the existing local-storage key and earlier notes when updating the UI.
 
 ## Publishing preference
 

@@ -9,7 +9,8 @@ test('the portable lab includes its scripts and styles without sibling requests'
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.ok(html.includes('<style>'));
   assert.ok(html.includes('function circle('));
-  assert.ok(html.includes('function render()'));
+  assert.ok(html.includes('function renderLab()'));
+  assert.ok(html.includes('function renderQuestion()'));
   assert.doesNotMatch(html, /<script[^>]+src=|<link[^>]+rel="stylesheet"/i);
   assert.doesNotMatch(html, /href="[^"]+\.md"/);
 });
