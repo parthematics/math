@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5ef">
+  <meta name="description" content="An interactive first step into differential geometry: explore curves, clocks, and curvature, then follow a personal learning path.">
+  <title>A feel for geometry · Math studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="geometry.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the lesson</a>
+  <aside class="sidebar" aria-label="Studio navigation">
+    <a class="brand" href="#main" aria-label="Math studio home"><span class="brand-symbol" aria-hidden="true">∿</span> math<span class="brand-dot">.</span></a>
+    <div class="sidebar-inner">
+      <p class="eyebrow">Your learning studio</p>
+      <nav>
+        <a class="nav-link" href="#experiment"><span aria-hidden="true">→</span> The experiment</a>
+        <a class="nav-link" href="#predictions"><span aria-hidden="true">◇</span> Make a prediction</a>
+        <a class="nav-link" href="#learning-path"><span aria-hidden="true">⌁</span> Your learning path</a>
+        <a class="nav-link" href="#notebook"><span aria-hidden="true">▤</span> Field notes</a>
+      </nav>
+      <div class="sidebar-course">
+        <span class="tiny-label">THE DESTINATION</span>
+        <h2>Differential<br>geometry</h2>
+        <p>From familiar vectors to the geometry of curved spaces.</p>
+        <div class="time-pill">4 hours / week <span aria-hidden="true">·</span> self-paced</div>
+      </div>
+      <p class="sidebar-footer">A little intuition.<br>A little rigor.<br>One good question at a time.</p>
+    </div>
+  </aside>
+
+  <main id="main">
+    <header class="topbar"><span>PURE MATH, MADE TANGIBLE</span><span class="status"><i aria-hidden="true"></i> Lesson 01 is ready</span></header>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">An invitation to think geometrically</p>
+        <h1 id="hero-title">A feel for<br><em>geometry.</em></h1>
+        <p class="hero-description">You already know how to calculate. Let’s explore what the calculations mean—and learn to prove what the pictures suggest.</p>
+        <a class="primary-link" href="#experiment">Start with a circle <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 330 270"><defs><pattern id="hero-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#cfd7cc"/></pattern></defs><rect width="330" height="270" fill="url(#hero-dots)"/><g fill="none" stroke="#426650" stroke-width="1.2"><ellipse cx="166" cy="134" rx="106" ry="100" transform="rotate(-24 166 134)"/><ellipse cx="166" cy="134" rx="106" ry="38" transform="rotate(-24 166 134)"/><ellipse cx="166" cy="134" rx="46" ry="100" transform="rotate(-24 166 134)"/><path d="M70 92 Q168 80 261 179 M64 140 Q164 136 240 216 M97 55 Q131 151 260 172" opacity=".5"/></g><path d="M67 158 Q148 226 253 118" fill="none" stroke="#d37b50" stroke-width="3"/><circle cx="224" cy="145" r="6" fill="#d37b50"/><text x="170" y="247" fill="#64705f" font-size="13" font-family="Georgia,serif" font-style="italic">follow your curiosity</text></svg>
+      </div>
+    </section>
+
+    <section class="lesson-heading" id="experiment" aria-labelledby="experiment-title">
+      <div><p class="eyebrow">01 / The first experiment</p><h2 id="experiment-title">Same circle. Different clock.</h2></div>
+      <span class="lesson-duration">≈ 20 min in the lab</span>
+    </section>
+    <p class="section-intro">A particle speeds up around a circle. Does the circle become more curved? Make a guess, then play with the clock.</p>
+
+    <section class="lab" aria-label="Interactive circle experiment">
+      <div class="lab-toolbar"><span><span class="live-dot" aria-hidden="true"></span> A circle, seen two ways</span><div class="playback"><button id="play" class="small-button" type="button" aria-pressed="false">Play motion</button><button id="reset" class="text-button" type="button">Reset</button></div></div>
+      <div class="visualizations">
+        <figure class="plot"><figcaption><span class="vector-dot velocity-color" aria-hidden="true"></span> Velocity <i>v</i><span class="plot-caption">direction + speed</span></figcaption><svg id="velocity-plot" viewBox="0 0 512 400" role="img" aria-labelledby="velocity-title velocity-desc"><title id="velocity-title">Velocity on a circle</title><desc id="velocity-desc">An arrow tangent to the circle whose length increases with radius and clock rate.</desc></svg></figure>
+        <figure class="plot"><figcaption><span class="vector-dot tangent-color" aria-hidden="true"></span> Unit tangent <i>T</i><span class="plot-caption">direction only</span></figcaption><svg id="tangent-plot" viewBox="0 0 512 400" role="img" aria-labelledby="tangent-title tangent-desc"><title id="tangent-title">Unit tangent on the same circle</title><desc id="tangent-desc">An arrow with length one that shows the direction of motion, independent of a positive clock rate.</desc></svg></figure>
+      </div>
+      <p class="plot-note">Same point, same circle, same arrow scale. Counterclockwise motion. Pausing freezes the picture; it doesn’t set the clock rate to zero.</p>
+      <div class="controls">
+        <div class="control"><label for="radius">Circle radius <i>R</i> <output id="radius-value" for="radius">2.00</output></label><input id="radius" type="range" min="0.75" max="2.5" step="0.25" value="2"><div class="range-captions"><span>tighter circle</span><span>wider circle</span></div></div>
+        <div class="control"><label for="clock">Clock rate <i>ω</i> <output id="clock-value" for="clock">1.00</output></label><input id="clock" type="range" min="0.5" max="2" step="0.25" value="1"><div class="range-captions"><span>slower</span><span>faster</span></div></div>
+        <div class="control"><label for="angle">Point angle <i>θ</i> <output id="angle-value" for="angle">35°</output></label><input id="angle" type="range" min="0" max="360" step="1" value="35"><div class="range-captions"><span>0°</span><span>360°</span></div></div>
+      </div>
+      <div class="readouts" aria-label="Measurements">
+        <div><span class="measurement-label">SPEED <span>distance / time</span></span><strong id="speed-value">2.00</strong><span class="measurement-formula">‖v‖ = Rω <span class="velocity-text">depends on the clock</span></span></div>
+        <div><span class="measurement-label">UNIT TANGENT LENGTH</span><strong id="tangent-value">1.00</strong><span class="measurement-formula">‖T‖ = 1 <span>direction without speed</span></span></div>
+        <div><span class="measurement-label">CURVATURE <span>1 / distance</span></span><strong id="curvature-value">0.50</strong><span class="measurement-formula">κ = 1/R <span class="tangent-text">depends on the radius</span></span></div>
+      </div>
+    </section>
+
+    <div class="insight"><span class="insight-icon" aria-hidden="true">✳</span><div><h3>The shape doesn’t know about your clock.</h3><p>Speed measures distance per time. Curvature measures turning per distance. Change the clock and you change the journey, while the circle keeps its shape.</p></div></div>
+
+    <section class="predictions-section" id="predictions" aria-labelledby="predictions-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / Make the idea yours</p><h2 id="predictions-title">Predict. Then explain.</h2></div><span class="attempt-status" id="attempt-status" aria-live="polite">0 / 2 predictions explored</span></div>
+      <div class="prediction-grid">
+        <article class="prediction-card" data-question="clock"><span class="question-number">01</span><h3>Double the clock rate.<br>Keep the radius.</h3><p>What happens to speed and curvature?</p><div class="answer-options" role="group" aria-label="Clock-rate prediction"><button type="button" data-answer="both">Both double</button><button type="button" data-answer="speed">Speed doubles; curvature stays the same</button><button type="button" data-answer="curvature">Speed stays the same; curvature doubles</button></div><p class="feedback" aria-live="polite" hidden></p></article>
+        <article class="prediction-card" data-question="radius"><span class="question-number">02</span><h3>Double the radius.<br>Keep the clock rate.</h3><p>Same angle per second, but a bigger circle.</p><div class="answer-options" role="group" aria-label="Radius prediction"><button type="button" data-answer="both">Speed and curvature both double</button><button type="button" data-answer="same">Speed stays the same; curvature halves</button><button type="button" data-answer="inverse">Speed doubles; curvature halves</button></div><p class="feedback" aria-live="polite" hidden></p></article>
+      </div>
+      <p class="quiet-note">Exploring a prediction is a starting point. Explaining it without the formulas is the real check.</p>
+    </section>
+
+    <section id="learning-path" class="path-section" aria-labelledby="path-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / Where this can take you</p><h2 id="path-title">A path into curved spaces.</h2></div><span class="path-time">~24 weeks · 4 hours / week</span></div>
+      <p class="section-intro">A flexible route built around your engineering background. The first lab is here; the rest is a curriculum for guided lessons in chat. Move on when an idea sticks, not when a week ends.</p>
+      <div class="path-list">
+        <details open><summary><span class="path-index">00</span><span><strong>A first taste</strong><small>Week 1 · You are here</small></span><span class="path-tag">LAB AVAILABLE</span></summary><div class="path-content">Explore a curve, separate shape from speed, and use a short placement check to find the foundations you need. <a href="lessons/01-same-circle-different-clock.md">Read the full first lesson →</a></div></details>
+        <details><summary><span class="path-index">01</span><span><strong>The language of proof</strong><small>Weeks 2–5 · Proofs + linear algebra</small></span><span class="expand-mark" aria-hidden="true">+</span></summary><div class="path-content">Definitions, quantifiers, counterexamples, vector spaces, inner products, and quadratic forms. Goal: write a short proof and explain the geometry behind a metric matrix.</div></details>
+        <details><summary><span class="path-index">02</span><span><strong>What “smooth” really means</strong><small>Weeks 6–9 · Analysis + multivariable calculus</small></span><span class="expand-mark" aria-hidden="true">+</span></summary><div class="path-content">Limits, derivatives as linear maps, the chain rule, local inverse functions, and arc length. Goal: connect a local linear approximation to a precise statement.</div></details>
+        <details><summary><span class="path-index">03</span><span><strong>The secret lives of curves</strong><small>Weeks 10–12 · Curvature + torsion</small></span><span class="expand-mark" aria-hidden="true">+</span></summary><div class="path-content">Regular curves, arc-length parameters, osculating circles, space curves, and torsion. Goal: derive curvature and explain why changing the clock does not change it.</div></details>
+        <details><summary><span class="path-index">04</span><span><strong>Life on a surface</strong><small>Weeks 13–16 · Tangent planes + metrics</small></span><span class="expand-mark" aria-hidden="true">+</span></summary><div class="path-content">Charts, tangent planes, first and second fundamental forms, and Gaussian curvature. Goal: explain why a cylinder is intrinsically flat while a sphere is not.</div></details>
+        <details><summary><span class="path-index">05</span><span><strong>Geometry from the inside</strong><small>Weeks 17–21 · Geodesics + parallel transport</small></span><span class="expand-mark" aria-hidden="true">+</span></summary><div class="path-content">Local isometries, covariant derivatives, geodesics, and parallel transport. Goal: find a geodesic and distinguish being locally straight from being globally shortest.</div></details>
+        <details><summary><span class="path-index">06</span><span><strong>When local becomes global</strong><small>Weeks 22–24 · Gauss–Bonnet + your capstone</small></span><span class="expand-mark" aria-hidden="true">+</span></summary><div class="path-content">Spherical triangles, Euler characteristic, and Gauss–Bonnet. Finish with a worked exploration of map distortion, cylinder geodesics, or spherical angle excess.</div></details>
+      </div>
+      <a class="document-link" href="CURRICULUM.md">Open the full curriculum, checkpoints & reading suggestions <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section id="notebook" class="notebook" aria-labelledby="notebook-title"><div class="notebook-heading"><p class="eyebrow">04 / Leave a thought for future you</p><h2 id="notebook-title">Your field notes.</h2><p>What changed your mind? What still feels mysterious? A question is a useful thing to bring to the next lesson.</p><span class="storage-status" id="storage-status" role="status">Notes stay in this browser</span></div><div class="notebook-input"><label for="notes">My explanation, in my own words</label><textarea id="notes" rows="7" placeholder="I think curvature ignores the clock because…"></textarea><p>Next, tell your tutor: “Teach me Lesson 1. Ask one question at a time.”</p></div></section>
+    <footer class="page-footer"><span>Math is a way of seeing.</span><span>Curiosity → intuition → proof</span></footer>
+    <noscript><p class="noscript-note">JavaScript is needed for the experiment and saved notes. You can still read the learning path and the linked written lesson.</p></noscript>
+  </main>
+</body>
+</html>

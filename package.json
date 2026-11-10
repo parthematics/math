@@ -1,0 +1,18 @@
+{
+  "name": "a-feel-for-geometry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A personal interactive route into differential geometry.",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/geometry.test.cjs && npm run build && node --test tests/site.test.cjs"
+  },
+  "devDependencies": {
+    "katex": "0.19.1",
+    "markdown-it": "15.0.3",
+    "markdown-it-texmath": "1.0.0"
+  }
+}
